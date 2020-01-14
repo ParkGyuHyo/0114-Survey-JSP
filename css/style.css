@@ -1,0 +1,182 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jua', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+a { text-decoration: none; }
+
+input:focus{ outline:none; }
+
+ul, li { margin: 0; padding: 0; }
+
+.wrapper {
+    z-index:1;
+    position:relative;
+}
+.wrapper:after{
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    position:absolute;
+    top:0;
+    left:0;
+    content:"";
+    background-image: url("../img/bgimg.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+     
+    opacity: 0.4!important; filter:alpha(opacity=30);
+}
+
+.slbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-shadow: 3px 3px 11px black;
+}
+
+.slbox > p {
+    font-size: 20pt;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.slbox > hr {
+    border: 1px solid #474747;
+}
+
+.slbox > input[type="button"] {
+    width: 130px;
+    height: 100px;
+    color: #fff;
+    margin: 10px;
+    border: 0px;
+    font-size: 15pt;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.slbox > input[name="adm_btn"] {
+    background: linear-gradient(180deg, #137196, #55829c)
+}
+
+.slbox > input[name="sv_people"] {
+    background: linear-gradient(180deg, #139664, #559c79)
+}
+
+.slbox > input[name="adm_btn"]:active {
+    background: linear-gradient(180deg, #133696, #55609c)
+}
+
+.slbox > input[name="sv_people"]:active {
+    background: linear-gradient(180deg, #139624, #559c59)
+}
+
+.f_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9996;
+    display: none;
+}
+
+.f_cover2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9998;
+    display: none;
+}
+
+.lfrm {
+    border: 1px solid #c3c3c3;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+
+.rfrm {
+    border: 1px solid #c3c3c3;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+
+.lfrm input[type="text"], .lfrm input[type="password"]{
+    border: 0px;
+    width: 100%;
+    height: 30px;
+}
+
+.rfrm input[type="text"], .rfrm input[type="password"], .rfrm input[type="date"]{
+    border: 0px;
+    width: 100%;
+    height: 30px;
+}
+
+.lnbox{
+    width: 300px;
+    height: 250px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 11px black;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: border-box;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+.rgbox {
+    width: 300px;
+    height: 390px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 11px black;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: border-box;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+.lnbox input[type=button],  .rgbox input[type=button]{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border: 0px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+.cn_btn {
+    background: linear-gradient(180deg, #b8ca1a 50%, #a4c754 100%);
+}
+
+.ln_btn {
+    background: linear-gradient(180deg, #1a98ca 50%, #54b0c7 100%);
+}

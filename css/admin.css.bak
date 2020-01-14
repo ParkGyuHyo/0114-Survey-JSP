@@ -1,0 +1,420 @@
+@font-face { font-family: 'Cafe24Simplehae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'BMEULJIRO'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'LotteMartHappy'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff'); } @font-face { font-family: 'LotteMartHappy'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff') format('woff'); } .lottemarthappy * { font-family: 'LotteMartHappy', sans-serif; }
+@font-face { font-family: 'BBTreeGR'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'BBTreeGR';
+    background: #ececec;
+}
+
+a { text-decoration: none; }
+a:active, a:visited { color: #fff; }
+
+input:focus{ outline:none; }
+
+input:focus {
+    border: 2px solid rgb(57, 163, 177);
+    transition: all 0.5s ease-in-out;
+}
+
+ul, li { margin: 0; padding: 0; }
+
+.header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #e2e2e2;
+    background: linear-gradient(180deg, rgb(235, 235, 235) 50%, rgb(243, 243, 243) 100%);
+}
+
+.header .logo {
+    line-height: 50px;
+    float: left;
+}
+
+@media screen and (max-width:800px){
+    .header .logo {
+        display: none;
+    }
+}
+
+.header .logo p {
+    margin: 0;
+    padding-left: 260px;
+    font-size: 15pt;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: rgb(48, 61, 78);
+}
+
+.header .adm_info {
+    line-height: 50px;
+    float: right;
+}
+
+.header .adm_info p {
+    margin: 0;
+    padding-right: 10px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: rgb(48, 61, 78);
+}
+
+.header .adm_info p input {
+    background: linear-gradient(180deg, rgb(187, 58, 133) 50%, rgb(226, 96, 172) 100%);
+    color: #fff;
+    border: 0px;
+    cursor: pointer;
+    height: 30px;
+}
+
+.lmenu {
+    width: 250px;
+    height: 100%;
+    background: rgb(38, 53, 73);
+    clear:both;
+    color: #fff;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    display: none;
+}
+
+.lmenu h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    font-size: 12pt;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin:0;
+}
+
+.lmenu ul ul {
+    background: rgb(56, 69, 87);
+}
+
+.lmenu ul ul li {
+    color: white;
+	text-decoration: none;
+	font-size: 11pt;
+	line-height: 40px;
+	display: block;
+	padding-left: 20px;
+	-webkit-transition: all 0.15s;
+	-moz-transition: all 0.15s;
+	-o-transition: all 0.15s;
+	-ms-transition: all 0.15s;
+	transition: all 0.15s;
+}
+
+.lmenu h3:hover {
+    background: rgb(56, 69, 87);
+}
+
+.lmenu ul ul li:hover {
+    cursor: pointer;
+    border-left: 7px solid #09c;
+}
+
+/* active 클래스 외에 것은 보이지 않게 하기 */
+.lmenu ul ul {
+	display: none;
+}
+.lmenu li.active ul {
+	display: block;
+}
+
+.lmenu h2 {
+    position: absolute;
+    bottom: 0;
+    text-align:center;
+    width: 100%;
+    background: rgb(56, 69, 87);
+    line-height: 50px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.lmenu_btn {
+    width: 250px;
+    background: rgb(56, 69, 87);
+    clear:both;
+    color: #fff;
+    position: absolute;
+    top: 0;
+}
+
+.lmenu_btn h2 {
+    text-align:center;
+    width: 100%;
+    background: rgb(56, 69, 87);
+    line-height: 50px;
+    box-sizing: border-box;
+    margin: 0;
+    cursor: pointer;
+}
+
+.dashboard {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.headline {
+    width:100%;
+    border-bottom: 1px solid #e2e2e2;
+    background: #fff;
+}
+
+.headline p {
+    margin: 0;
+    line-height: 50px;
+    padding-left: 10px;
+    color: rgb(57, 163, 177);
+    font-weight: bold;
+}
+
+.sv_list {
+    width: 100%;
+    height: auto;
+    grid-column: 1/3;
+    border-radius: 7px;
+}
+
+.sv_list #sch_open{
+    float: left;
+}
+
+#sch_open_btn {
+    font-size: 20pt;
+    cursor: pointer;
+}
+
+.sv_list #schfrm {
+    clear: left;
+    position: static;
+    width: 320px;
+    border: 1px solid #c3c3c3;
+    background: #fff;
+    padding: 10px;
+    display: none;
+}
+
+#schfrm table th {
+    text-align: right;
+}
+
+#schfrm table input, #schfrm table select {
+    width: 100%;
+    height: 20px;
+}
+
+.sv_list #lstcnt{
+    float: right;
+}
+
+.slfrm {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    clear:both;
+}
+
+.sv_report {
+    width: 100%;
+    height: 600px;
+    padding: 10px;
+    grid-column: 3/4;
+    border-radius: 7px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media screen and (max-width:800px)
+{
+    .sv_list, .sv_report {
+        grid-column: 1/4;
+    }
+
+    .slfrm table th:nth-child(4),
+    .slfrm table th:nth-child(6),
+    .slfrm table th:nth-child(7),
+    .slfrm table td:nth-child(4),
+    .slfrm table td:nth-child(6),
+    .slfrm table td:nth-child(7) {
+        display:none;
+    }
+}
+
+#lstcnt {
+    font-weight: bold;
+    vertical-align: bottom;
+    margin-top: 30px;
+}
+
+
+.slfrm table {
+    border-collapse: collapse;
+}
+
+.slfrm table td {
+    text-align: center;
+    height: 50px;
+}
+
+.slfrm table td:nth-child(3) {
+    text-align: left;
+}
+
+.slfrm tr {
+    height: 50px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.slfrm tr:hover {
+    background: #e2e2e2;
+    cursor: pointer;
+}
+
+#c_btn {
+    float: right;
+}
+
+#c_btn input {
+    width:50px;
+    height: 35px;
+    border: 1px solid #e2e2e2;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#ins_btn {
+    background: linear-gradient(180deg, #b8ca1a 50%, #aec773 100%);
+}
+
+#upd_btn {
+    background: linear-gradient(180deg, #1a92ca 50%, #76abc9 100%);
+}
+
+#del_btn {
+    background: linear-gradient(180deg, #ca1a4f 50%, #c57589 100%);
+}
+
+#sv_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#sv_cover #sv_ins_frm {
+    width:70%;
+    height: 90%;
+    background: #ececec;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 11px black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    text-align: center;
+}
+
+#pop_close_btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#sv_ins_frm hr {
+    border: 0.7px solid #e2e2e2;
+    margin: 20px 0;
+}
+
+#sub_section {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#sub_section input, .sv_content input {
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+#sub_section input[type=radio] {
+    width: auto;
+    height: auto;
+    margin: 0px 20px;
+}
+
+#sub_section table tr {
+    height: 30px;
+}
+
+#sub_section table th {
+    text-align: right;
+}
+
+#con_section {
+    width: 100%;
+    max-height: 550px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+.sv_content {
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    margin: 5px 0;
+    position: relative;
+}
+
+.sv_content table tr {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.sv_content table th {
+    text-align: center;
+}
+
+#add_row {
+    font-size: 40px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+	cursor: pointer;
+}
